@@ -5,4 +5,4 @@ This automatically adds all folder from `C:\Users\[username]\Documents\My Games\
 
 ##Installation
 
-Simple put all the .exe and .dll files into your `C:\Users\[username]\Documents\My Games\OpenMW folder`. 
+Go to the release section and download the `windows.zip`, then simply put all the .exe and .dll files into your `C:\Users\[username]\Documents\My Games\OpenMW folder`. 
