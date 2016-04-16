@@ -2,6 +2,10 @@ local moddir = os.getenv"HOMEDRIVE"..os.getenv"HOMEPATH".."\\Documents\\My Games
 
 local newstr = ""
 local contentstr = ""
+local activemods = {
+
+}
+
 
 for line in io.lines("openmw.cfg") do
 	if not string.find(line, moddir) then --if it's a directory to a mod, skip it, will be readded later
@@ -13,8 +17,10 @@ for line in io.lines("openmw.cfg") do
 	end
 end
 for dir in io.popen([[dir "%HOMEPATH%\Documents\My Games\OpenMW\mods" /b /ad]]):lines() do
-	print("Added mod directory: "..dir)
-	newstr = newstr.."data=".."\""..moddir..dir.."\"\n" --add all mods dirs
+	if string.sub(dir, 1, 1) ~= "-" then
+		print("Added mod directory: "..dir)
+		newstr = newstr.."data=".."\""..moddir..dir.."\"\n" --add all mods dirs
+	end
 end
 
 local new = io.open("openmw.cfg", "w+")
