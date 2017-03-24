@@ -2,9 +2,6 @@ local moddir = os.getenv"HOMEDRIVE"..os.getenv"HOMEPATH".."\\Documents\\My Games
 
 local newstr = ""
 local contentstr = ""
-local activemods = {
-
-}
 
 
 for line in io.lines("openmw.cfg") do
